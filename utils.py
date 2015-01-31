@@ -1,3 +1,8 @@
+try: 
+    input = raw_input
+except NameError: 
+    pass
+
 import json
 
 from clint import resources
