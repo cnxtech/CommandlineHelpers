@@ -9,8 +9,8 @@ base_url = 'https://ulsterbank.openbankproject.com/'
 bank_id = 'ulster'
 account_id = 'charity1'
 
-client_key = ""
-client_secret = ""
+client_key = "1ks4oso52fbhcurkvtrsjejzkmzwlqb0f2mgfnv3"
+client_secret = "2svdaxpdk5qdg0ptjhmp3xmxdfrzen1ouu515xjj"
 
 def oauth_login(base_url, key_file):
 
