@@ -10,12 +10,21 @@ from clint.textui import colored, puts
 
 from requests_oauthlib import OAuth1Session
 
+
+
+
 base_url = 'https://ulsterbank.openbankproject.com/'
 bank_id = 'ulster'
-account_id = 'charity1'
+account_id = 'current17'
 
-client_key = "1ks4oso52fbhcurkvtrsjejzkmzwlqb0f2mgfnv3"
-client_secret = "2svdaxpdk5qdg0ptjhmp3xmxdfrzen1ouu515xjj"
+# 00000169100000
+
+# rm /Users/simonredfern/Library/Application\ Support/evmakesgeo/config.ini
+
+
+client_key = "b3ss5lbqma34xfyd1xu0utx4qvuh1x2ifpkzyeoz"
+client_secret = "3tpp0v41ifky5d21g1n2vxvkcqujbbo2tyxuzmgy"
+
 
 def oauth_login(base_url, key_file):
 

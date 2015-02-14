@@ -30,4 +30,5 @@ for index, transaction in enumerate(transactions):
     url = "{}obp/v1.2.1/banks/{}/accounts/{}/public/transactions/{}/metadata/where".format(base_url, bank_id, account_id, transaction)
     payload = '{"where": { "latitude":' + csv_data[index][1] + '"longitude": ' + csv_data[index][0] + ' } }'
     headers = {'content-type': 'application/json'}
-    res = openbank.post(url, data=payload, headers=headers)
+    print ('lalala')
+    #res = openbank.post(url, data=payload, headers=headers)
