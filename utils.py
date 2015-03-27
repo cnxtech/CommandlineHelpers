@@ -13,17 +13,29 @@ from requests_oauthlib import OAuth1Session
 
 
 
-base_url = 'https://ulsterbank.openbankproject.com/'
-bank_id = 'ulster'
-account_id = 'current17'
+#base_url = 'https://ulsterbank.openbankproject.com/'
+#bank_id = 'ulster'
+#account_id = 'current17'
+
+base_url = 'http://127.0.0.1:8081/' # Needs trailing /
+bank_id = 'changeme'
+account_id = 'changeme'
+
+
 
 # 00000169100000
 
 # rm /Users/simonredfern/Library/Application\ Support/evmakesgeo/config.ini
 
 
-client_key = "b3ss5lbqma34xfyd1xu0utx4qvuh1x2ifpkzyeoz"
-client_secret = "3tpp0v41ifky5d21g1n2vxvkcqujbbo2tyxuzmgy"
+# Ulster
+#client_key = "b3ss5lbqma34xfyd1xu0utx4qvuh1x2ifpkzyeoz"
+#client_secret = "3tpp0v41ifky5d21g1n2vxvkcqujbbo2tyxuzmgy"
+
+
+client_key = "txlx3g1uzhyj2xllwncjk3jt4f3o4lngs4joav0t"
+client_secret = "k0133bi4rqdejrwiz3kmatj23ztxpkkomfvfj42x"
+
 
 
 def oauth_login(base_url, key_file):
@@ -55,6 +67,7 @@ def oauth_login(base_url, key_file):
         oauth_tokens = openbank.fetch_access_token(access_token_url)
         resources.user.write('config.ini', json.dumps(oauth_tokens))
     else:
+        puts(colored.yellow("Loading OAuth keys from: %s" % key_file))
         keys = json.loads(key_file)
         openbank = OAuth1Session(
             client_key,
