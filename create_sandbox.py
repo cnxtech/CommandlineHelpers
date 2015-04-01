@@ -1,16 +1,19 @@
 # -*- coding: utf-8 -*-
 
-#import csv
+# TODO: add secret key to url (or POST?)
+# also look at invalid signature error message (oauth) or if that is part of missing secret key
+# (scala obp importer has it working)
+
 #import json
-from pprint import pprint
 from clint import resources
-from utils import oauth_login, base_url, bank_id, account_id
+from utils import oauth_login, base_url
 
 resources.init('openbankproject', 'evmakesgeo')
 key_file = resources.user.read('config.ini')
 
-print "key file is:"
-print key_file
+# key file in a place like: /Users/simonredfern/Library/Application\ Support/evmakesgeo/config.ini
+
+print "key file is: %s" % key_file
 
 openbank = oauth_login(base_url, key_file)
 
