@@ -25,12 +25,26 @@ print transactions
 
 print "transfer methods"
 
-response = openbank.get("{}obp/v1.3.0/banks/{}/accounts/{}/transfer-methods".format(base_url, bank_id, account_id))
+
+
+#https://ulsterbank.openbankproject.com/obp/v1.3.0/banks/ulster/accounts/current17/transfer-methods
+
+tm_url = "{}obp/v1.3.0/banks/{}/accounts/{}/transfer-methods".format(base_url, bank_id, account_id)
+
+
+print "tm_url is %s" % tm_url
+
+response = openbank.get(tm_url)
 #print "{}obp/v1.2.1/banks/{}/accounts/{}/owner/transactions".format(base_url, bank_id, account_id)
 #methods = [ each['id'] for each in response.json()['transfer-methods']]
 
 
+import pdb; pdb.set_trace()
+
 print response.json()
+
+
+
 
 
 

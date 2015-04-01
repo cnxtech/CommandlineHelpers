@@ -19,7 +19,7 @@ print key_file
 openbank = oauth_login(base_url, key_file)
 
 # Load a json file for sandbox creation.
-with open('/Users/simonredfern/Documents/OpenBankProject/DATA/BNPP/OBP-sandbox-bnpp-fr_pretty.json') as data_file:
+with open('/Users/simonredfern/Documents/OpenBankProject/DATA/BNPP/OBP-sandbox-bnpp-fr_compact.json') as data_file:
 #with open('/Users/simonredfern/Documents/OpenBankProject/DATA/BNPP/test.json') as data_file:
     data = json.load(data_file)
 
